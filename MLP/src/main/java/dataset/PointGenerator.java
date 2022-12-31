@@ -41,10 +41,6 @@ public class PointGenerator {
 		
 	}
 	
-	public void classifyPointFromFile(String path) {
-		
-	}
-	
 	public void generatePoints(String type) {
 		int dataClass = 0;
 		for (int i = 0; i < 4000; i ++) {
@@ -80,14 +76,4 @@ public class PointGenerator {
 	public List<double[]> getTestData() {
 		return testData;
 	}
-
-	
-
-
-	
-	
-	
-	
-	
-
 }
