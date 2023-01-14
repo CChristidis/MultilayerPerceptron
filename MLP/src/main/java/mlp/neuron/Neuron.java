@@ -64,15 +64,13 @@ public abstract class Neuron {
 	 */
 	public void updateWeights() {
 		List<Neuron> previousLayerNeurons = previousLayer.getNeurons();
-		
+		this.bias -= learningRate * this.delta;
 		for (int i = 0; i < previousLayerNeurons.size(); i ++) {
 			Neuron currentNeuron = previousLayerNeurons.get(i);	
 			
 			double newWeight = this.weights.get(i) - (this.learningRate * calculatePartialDerivative(currentNeuron)); // w(t+1) = w(t) - n*dE/dwi
 			 	
 			this.weights.set(i, (double) newWeight);
-			this.bias -= learningRate * this.delta;
-		
 		}	
 	}
 	
